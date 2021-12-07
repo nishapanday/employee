@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-4">
+    <h2>My Employee</h2>
+
+    <ul class="employees">
+      <li
+        [class.selected]="employee === selectedEmployee"
+        *ngFor="let employee of allemployee"
+        (click)="onSelect(employee)"
+      >
+        <a
+          routerLink="/employees/{{ employee.userId }}"
+          [class.bg-info]="employee.userId == userId"
+        >
+          <span class="badge">{{ employee.userId }}</span
+          >{{ employee.preferredFullName }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-6 ml-2">
+    <!-- <app-employee-detail></app-employee-detail> -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
