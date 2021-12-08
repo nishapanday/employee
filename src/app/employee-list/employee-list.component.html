@@ -8,18 +8,19 @@
         *ngFor="let employee of allemployee"
         (click)="onSelect(employee)"
       >
-        <a
-          routerLink="/employees/{{ employee.userId }}"
+        <div
+          (click)="showDetail($event, employee)"
           [class.bg-info]="employee.userId == userId"
         >
           <span class="badge">{{ employee.userId }}</span
           >{{ employee.preferredFullName }}
-        </a>
+        </div>
       </li>
     </ul>
   </div>
   <div class="col-6 ml-2">
     <!-- <app-employee-detail></app-employee-detail> -->
+    <h2 *ngIf="!userId">No Employee Selected</h2>
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -19,7 +19,6 @@ export class EmployeeDetailComponent implements OnInit {
     private employee: EmployeeService
   ) {
     this.route.params.subscribe((params) => {
-      console.log(params);
       // Defaults to 0 if no query param provided.
       try {
         this.userId = params.userId;

@@ -1,15 +1,12 @@
-<div *ngIf="userId; else noEmployee">
+<div *ngIf="userId">
   <!-- <div *ngIf="selectedEmployee"> -->
-  <h2>{{ selectedEmployee.preferredFullName }} Details</h2>
-  <div><span>id: </span>{{ selectedEmployee.userId }}</div>
-  <div><span>Firstname: </span>{{ selectedEmployee.firstName }}</div>
-  <div><span>Lastname: </span>{{ selectedEmployee.lastName }}</div>
-  <div><span>Code: </span>{{ selectedEmployee.employeeCode }}</div>
-  <div><span>Region: </span>{{ selectedEmployee.region }}</div>
-  <div><span>Phone Number: </span>{{ selectedEmployee.phoneNumber }}</div>
-  <div><span>Email: </span>{{ selectedEmployee.emailAddress }}</div>
+  <h2>{{ selectedEmployee?.preferredFullName }}</h2>
+  <div><span>id: </span>{{ selectedEmployee?.userId }}</div>
+  <div><span>Firstname: </span>{{ selectedEmployee?.firstName }}</div>
+  <div><span>Lastname: </span>{{ selectedEmployee?.lastName }}</div>
+  <div><span>Code: </span>{{ selectedEmployee?.employeeCode }}</div>
+  <div><span>Region: </span>{{ selectedEmployee?.region }}</div>
+  <div><span>Phone Number: </span>{{ selectedEmployee?.phoneNumber }}</div>
+  <div><span>Email: </span>{{ selectedEmployee?.emailAddress }}</div>
   <!-- </div> -->
 </div>
-<ng-template #noEmployee>
-  <h2>No Employee Selected</h2>
-</ng-template>

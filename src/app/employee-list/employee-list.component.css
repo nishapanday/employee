@@ -14,7 +14,7 @@
   left: 0.1em;
 }
 
-.employees a {
+.employees div {
   color: black;
   text-decoration: none;
   display: block;
@@ -25,22 +25,22 @@
   border-radius: 8px;
 }
 
-.employees a:hover {
+.employees div:hover {
   color: #2c3a41;
   background-color: #e6e6e6;
 }
 
-.employees a:active {
+.employees div:active {
   background-color: #525252;
   color: #fafafa;
 }
 
-.employees .selected a {
+.employees .selected div {
   background-color: #d6e6f7;
 }
 
-.employees .selected a:hover {
-  background-color: brown;
+.employees .selected div:hover {
+  background-color: lightblue;
 }
 
 .employees .badge {
