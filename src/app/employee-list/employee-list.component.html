@@ -19,8 +19,10 @@
     </ul>
   </div>
   <div class="col-6 ml-2">
-    <!-- <app-employee-detail></app-employee-detail> -->
+    <app-employee-detail
+      *ngIf="userId"
+      [selectedEmployee]="selectedEmployee"
+    ></app-employee-detail>
     <h2 *ngIf="!userId">No Employee Selected</h2>
-    <router-outlet></router-outlet>
   </div>
 </div>

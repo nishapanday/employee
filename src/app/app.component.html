@@ -1,6 +1,7 @@
 <div class="container">
   <a class="btn btn-lg btn-success" routerLink="/">Home</a>
-  <a class="btn btn-lg btn-info" routerLink="/employees">Employees</a>
+  <!-- <a class="btn btn-lg btn-info" routerLink="/employees">Employees</a> -->
+  <a class="btn btn-lg btn-info" (click)="onNavigate()">Employees</a>
 </div>
 <div class="wrapper">
   <router-outlet></router-outlet>

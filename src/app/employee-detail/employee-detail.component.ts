@@ -9,32 +9,12 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./employee-detail.component.css'],
 })
 export class EmployeeDetailComponent implements OnInit {
-  @Input() allemployee: any;
-  selectedEmployee: any = null;
-  userId: any = false;
-  employees: any = [];
+  @Input() selectedEmployee: any = null;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private employee: EmployeeService
-  ) {
-    this.route.params.subscribe((params) => {
-      // Defaults to 0 if no query param provided.
-      try {
-        this.userId = params.userId;
-        this.employee.getemployeeData().subscribe((data: any) => {
-          this.allemployee = data.Employees;
-          this.allemployee.forEach((emp: any) => {
-            if (emp.userId == this.userId) {
-              this.selectedEmployee = emp;
-            }
-          });
-        });
-      } catch {
-        this.userId = false;
-      }
-    });
-  }
+  ) {}
 
   ngOnInit(): void {}
 }
